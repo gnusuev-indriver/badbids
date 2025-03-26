@@ -1,0 +1,100 @@
+city,city_id,country,type_name,rides_badbid_cnt,rides_cnt,badbids_share,badbid_ratio_avg,rides_at_risk
+Trujillo,4257,Peru,auto_econom,1538094,1959613,0.853,1.292,0.785
+Arequipa,4258,Peru,auto_econom,1052725,1334568,0.849,1.309,0.789
+Boa Vista,4148,Brazil,auto_econom,337880,455269,0.838,1.374,0.742
+Lima,4199,Peru,auto_econom,7325577,10568787,0.806,1.267,0.693
+Chiclayo,4272,Peru,auto_econom,332910,493308,0.772,1.248,0.675
+Barranquilla,4243,Colombia,auto_econom,1314977,2048987,0.765,1.257,0.642
+Уральск,238,Казахстан,auto_econom_wheelchair,395210,615839,0.764,1.3,0.642
+Экибастуз,263,Казахстан,auto_econom,219312,304869,0.745,1.289,0.719
+Bucaramanga,4253,Colombia,auto_econom,753446,1229068,0.736,1.245,0.613
+Santa Cruz de la Sierra,5512,Bolivia,auto_econom,611960,935217,0.736,1.236,0.654
+Santo Domingo,4825,Dominican Republic,auto_econom,722640,1243514,0.729,1.316,0.581
+Antofagasta,4263,Chile,auto_econom,368911,621937,0.729,1.294,0.593
+Семей,228,Казахстан,auto_econom,288247,461681,0.729,1.25,0.624
+Hermosillo,4236,Mexico,auto_econom,569814,919069,0.721,1.218,0.62
+Кызылорда,257,Казахстан,auto_econom,248292,398135,0.72,1.257,0.624
+Bogota,4197,Colombia,auto_econom,1077930,1944271,0.72,1.253,0.554
+Islamabad / Rawalpindi,5448,Pakistan,city_contractor_comfort_level_ride_mini,1083468,1971071,0.719,1.214,0.55
+Piura,4275,Peru,auto_econom,178966,310575,0.708,1.248,0.576
+Tepic,4241,Mexico,auto_econom,473847,816788,0.695,1.204,0.58
+Medellin,4242,Colombia,auto_econom,1440508,2688980,0.693,1.235,0.536
+Lahore,5388,Pakistan,Rickshaw,697299,1270141,0.692,1.221,0.549
+Kathmandu,5957,Nepal,auto_econom,550716,884843,0.692,1.174,0.622
+Тараз,235,Казахстан,auto_econom,180914,304752,0.684,1.246,0.594
+Cartagena,4244,Colombia,auto_econom_nocomment,440887,764442,0.683,1.207,0.577
+Puerto Vallarta,4515,Mexico,auto_econom,438593,816420,0.675,1.205,0.537
+Cochabamba,5504,Bolivia,auto_econom,343382,595303,0.673,1.228,0.577
+Kathmandu,5957,Nepal,moto_econom,2505440,3803834,0.673,1.182,0.659
+Атырау,221,Казахстан,auto_econom,294190,529153,0.667,1.223,0.556
+Alexandria (الإسكندرية),9415,Egypt,auto_econom,219923,423845,0.666,1.247,0.519
+Караганда,242,Казахстан,auto_econom_karaganda,398685,683237,0.663,1.244,0.584
+Calama,5568,Chile,auto_econom,224872,329790,0.663,1.225,0.682
+Santo Domingo,4825,Dominican Republic,moto_econom,461045,733763,0.662,1.321,0.628
+Lahore,5388,Pakistan,city_contractor_comfort_level_ride_mini,755240,1567536,0.661,1.191,0.482
+Saltillo,4193,Mexico,auto_econom,745156,1403203,0.649,1.192,0.531
+Islamabad / Rawalpindi,5448,Pakistan,moto_econom,621846,1233961,0.647,1.207,0.504
+Merida,4194,Mexico,auto_econom,567619,1102674,0.645,1.188,0.515
+Quito,4404,Ecuador,auto_econom,693221,1440053,0.643,1.246,0.481
+San Salvador,4195,El Salvador,auto_econom,417466,909162,0.642,1.301,0.459
+Cucuta,4196,Colombia,auto_econom,174939,368734,0.629,1.226,0.474
+Guatemala City,4198,Guatemala,auto_econom,267357,519413,0.627,1.198,0.515
+Актобе,213,Казахстан,auto_econom,299527,592490,0.626,1.219,0.506
+Guatemala City,4198,Guatemala,moto_econom,653144,1244424,0.625,1.214,0.525
+Lahore,5388,Pakistan,moto_econom,1279853,2648862,0.622,1.207,0.483
+Актау,258,Казахстан,auto_econom,305019,586766,0.619,1.221,0.52
+Mazatlan,4240,Mexico,auto_econom,195907,403063,0.618,1.18,0.486
+Karachi,5396,Pakistan,Rickshaw,305779,515686,0.618,1.14,0.593
+Cali,4255,Colombia,auto_econom,178001,370952,0.616,1.24,0.48
+Pereira,4252,Colombia,auto_econom,231860,509799,0.616,1.217,0.455
+Karachi,5396,Pakistan,city_contractor_comfort_level_ride_mini,378185,626922,0.616,1.127,0.603
+Manado,5640,Indonesia,moto_econom,747776,963125,0.608,1.235,0.776
+Manaus,4524,Brazil,auto_econom,166686,374669,0.607,1.252,0.445
+Guayaquil,4385,Ecuador,auto_econom,417296,940613,0.606,1.218,0.444
+Curitiba,4376,Brazil,auto_econom,180777,411238,0.593,1.251,0.44
+San Luis Potosi,4231,Mexico,auto_econom,345541,798080,0.586,1.19,0.433
+Santiago de Queretaro,4234,Mexico,auto_econom,370108,810667,0.584,1.174,0.457
+Cairo (القاهرة),10155,Egypt,auto_econom,2421839,5733319,0.582,1.213,0.422
+Recife,4373,Brazil,moto_econom,141953,337145,0.579,1.269,0.421
+Coquimbo y LaSerena,4266,Chile,auto_econom,152015,355851,0.576,1.245,0.427
+Manado,5640,Indonesia,auto_econom,286761,445907,0.572,1.179,0.643
+Arica,4267,Chile,auto_econom,208169,398155,0.57,1.202,0.523
+Veracruz,4180,Mexico,auto_econom,233257,540933,0.564,1.173,0.431
+Manaus,4524,Brazil,moto_econom,151196,382958,0.547,1.251,0.395
+São Paulo,4142,Brazil,auto_econom,460808,1170859,0.547,1.24,0.394
+Medan,5681,Indonesia,moto_econom,618394,854737,0.546,1.178,0.723
+Bucaramanga,4253,Colombia,moto_econom,143327,351867,0.544,1.217,0.407
+Medellin,4242,Colombia,moto_econom,541596,1361644,0.544,1.21,0.398
+Iquique y Alto Hospicio,4271,Chile,auto_econom,249265,522815,0.539,1.197,0.477
+Астана (Нур-Султан),150,Казахстан,auto_econom_karaganda,459601,1213445,0.532,1.175,0.379
+Santiago,4200,Chile,auto_econom,173552,518524,0.528,1.223,0.335
+Bandung,5698,Indonesia,auto_econom,187482,371774,0.527,1.178,0.504
+Bandung,5698,Indonesia,moto_econom,1380537,1921240,0.509,1.156,0.719
+Karachi,5396,Pakistan,moto_econom,330227,684085,0.507,1.131,0.483
+San Salvador,4195,El Salvador,moto_econom,98763,303492,0.497,1.264,0.325
+Panama,5548,Panama,auto_econom,466223,1177070,0.496,1.219,0.396
+Lagos,4349,Nigeria,auto_econom,371529,935749,0.496,1.149,0.397
+Ciudad Juarez,4227,Mexico,auto_econom,328706,861614,0.494,1.169,0.382
+Kolkata,5257,India,Ride A/C,486523,1052918,0.488,1.113,0.462
+Алматы,169,Казахстан,auto_econom_karaganda,272986,766893,0.484,1.193,0.356
+Kuala Lumpur,5910,Malaysia,auto_econom,264209,875458,0.482,1.264,0.302
+Rabat (الرباط),4208,Morocco,auto_econom_dublicate,276090,590077,0.481,1.187,0.468
+Bogota,4197,Colombia,moto_econom,196021,636109,0.48,1.192,0.308
+Monclova,4381,Mexico,auto_econom,166252,405478,0.468,1.166,0.41
+San Jose,5513,Costa Rica,auto_econom,260618,732098,0.467,1.181,0.356
+Cape Town,4300,South Africa,auto_econom_without_option_4_pass,521728,1423023,0.462,1.183,0.367
+Kolkata,5257,India,moto_econom,277988,535083,0.46,1.147,0.52
+Chandigarh,5249,India,Ride A/C,275462,633086,0.457,1.124,0.435
+Alger (الجزائر العاصمة),9417,Algeria,auto_econom,283751,897428,0.452,1.181,0.316
+Cairo (القاهرة),10155,Egypt,moto_econom,367969,1057879,0.446,1.181,0.348
+Leon de los Aldama,4229,Mexico,auto_econom,109299,372037,0.441,1.141,0.294
+Chandigarh,5249,India,moto_econom,312759,676226,0.437,1.15,0.463
+Vientiane (Capital),6267,Laos,auto_econom,162482,346803,0.423,1.261,0.469
+Guadalajara,4225,Mexico,auto_econom,138788,508169,0.4,1.142,0.273
+Harare,5473,Zimbabwe,auto_econom,187083,427758,0.386,1.243,0.437
+Casablanca (الدار البيضاء),4209,Morocco,auto_econom_dublicate,329908,825556,0.368,1.169,0.4
+Mexico city,4143,Mexico,auto_econom,265051,1219536,0.35,1.132,0.217
+Jakarta and Jabodetabek area,5676,Indonesia,moto_econom,392763,706287,0.339,1.12,0.556
+Surabaya,5667,Indonesia,moto_econom,187133,413462,0.316,1.135,0.453
+Metro Manila,5421,Philippines,order_title_ride_philippines,87273,792896,0.067,1.065,0.11
+Одесса,763,Украина,auto_econom_Ukraine,0,335949,0.0,,0.0
