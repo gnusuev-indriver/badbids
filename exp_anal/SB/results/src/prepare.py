@@ -84,8 +84,8 @@ def prepare_order_data(df):
     return df
 
 
-def prepare_tender_data(df):
-    df['group_name'] = df['tender_group_name']
+def prepare_bid_data(df):
+    df['group_name'] = df['bid_group_name']
 #     df = df[
 #         ~(df['duration_in_min'].isnull()) &
 #         ~(df['distance_in_km'].isnull())

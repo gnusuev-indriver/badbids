@@ -46,15 +46,73 @@ METRIC_LIST = [
     ["order2done", "rides_count", "orders_count"], #DR
     ### bid --> ...
     ["bid2accept", "accepted_orders_count", "orders_with_bids_count"],
+    ["accept2done", "rides_count", "accepted_orders_count"],
     ["bid2done", "rides_count", "orders_with_bids_count"],
     ["start_price_bid2accept", "start_price_bid_accepted_orders_count", "start_price_bid_orders_count"],
     ["start_price_bid2done", "start_price_bid_rides_count", "start_price_bid_orders_count"],
+    ### ratios
+    ["bids_per_ride", "bids_count", "rides_count"],
+    ['bids_per_order_with_bid', 'bids_count', 'orders_with_bids_count'],
+    ["bids_per_order", "bids_count", "orders_count"],
+    ["bids_per_driver", "bids_count", "drivers_count"],
+    ["accepted_bids_per_driver", "accepted_bids_count", "drivers_count"],
+    ['drivers_per_order', 'drivers_count', 'orders_count'],
+    ['drivers_per_orders_with_bid', 'drivers_count', 'orders_with_bids_count'],
+    ['bids_accepted_per_order', 'accepted_bids_count', 'orders_count'],
+    ['bids_accepted_per_order_with_bid', 'accepted_bids_count', 'orders_with_bids_count'],
+    ['bids_accepted_per_driver', 'accepted_bids_count', 'drivers_count'],
+    ['accepted_bids_per_bid', 'accepted_bids_count', 'bids_count'],
+    ### bidding options
+    ## shares
+    ['bids_option_startprice_share', 'bids_option_startprice_count', 'bids_count'],
+    ['bids_option_option1_share', 'bids_option_option1_count', 'bids_count'],
+    ['bids_option_option2_share', 'bids_option_option2_count', 'bids_count'],
+    ['bids_option_option3_share', 'bids_option_option3_count', 'bids_count'],
+    ['bids_option_other1_share', 'bids_option_other1_count', 'bids_count'],
+    ['bids_option_other2_share', 'bids_option_other2_count', 'bids_count'],
+    ['bids_option_other3_share', 'bids_option_other3_count', 'bids_count'],
+    ## bid2done
+    ['bid_option_startprice2done', 'rides_by_bid_option_startprice_count', 'bids_option_startprice_count'],
+    ['bid_option_option12done', 'rides_by_bid_option_option1_count', 'bids_option_option1_count'],
+    ['bid_option_option22done', 'rides_by_bid_option_option2_count', 'bids_option_option2_count'],
+    ['bid_option_option32done', 'rides_by_bid_option_option3_count', 'bids_option_option3_count'],
+    ['bid_option_other12done', 'rides_by_bid_option_other1_count', 'bids_option_other1_count'],
+    ['bid_option_other22done', 'rides_by_bid_option_other2_count', 'bids_option_other2_count'],
+    ['bid_option_other32done', 'rides_by_bid_option_other3_count', 'bids_option_other3_count'],
+    ## bid2accept
+    ['bid_option_startprice2accept', 'accepted_bids_option_startprice_count', 'bids_option_startprice_count'],
+    ['bid_option_option12accept', 'accepted_bids_option_option1_count', 'bids_option_option1_count'],
+    ['bid_option_option22accept', 'accepted_bids_option_option2_count', 'bids_option_option2_count'],
+    ['bid_option_option32accept', 'accepted_bids_option_option3_count', 'bids_option_option3_count'],
+    ['bid_option_other12accept', 'accepted_bids_option_other1_count', 'bids_option_other1_count'],
+    ['bid_option_other22accept', 'accepted_bids_option_other2_count', 'bids_option_other2_count'],
+    ['bid_option_other32accept', 'accepted_bids_option_other3_count', 'bids_option_other3_count'],
+    ## accept2done
+    ['accepted_bid_option_startprice2done', 'rides_by_bid_option_startprice_count', 'accepted_bids_option_startprice_count'],
+    ['accepted_bid_option_option12done', 'rides_by_bid_option_option1_count', 'accepted_bids_option_option1_count'],
+    ['accepted_bid_option_option22done', 'rides_by_bid_option_option2_count', 'accepted_bids_option_option2_count'],
+    ['accepted_bid_option_option32done', 'rides_by_bid_option_option3_count', 'accepted_bids_option_option3_count'],
+    ['accepted_bid_option_other12done', 'rides_by_bid_option_other1_count', 'accepted_bids_option_other1_count'],
+    ['accepted_bid_option_other22done', 'rides_by_bid_option_other2_count', 'accepted_bids_option_other2_count'],
+    ['accepted_bid_option_other32done', 'rides_by_bid_option_other3_count', 'accepted_bids_option_other3_count'],
+    ## avg prices
+    ['bid_option_startprice_avg_price', 'bids_option_startprice_bid_price_currency_sum', 'bids_option_startprice_count'],
+    ['bid_option_option1_avg_price', 'bids_option_option1_bid_price_currency_sum', 'bids_option_option1_count'],
+    ['bid_option_option2_avg_price', 'bids_option_option2_bid_price_currency_sum', 'bids_option_option2_count'],
+    ['bid_option_option3_avg_price', 'bids_option_option3_bid_price_currency_sum', 'bids_option_option3_count'],
+    ['bid_option_other1_avg_price', 'bids_option_other1_bid_price_currency_sum', 'bids_option_other1_count'],
+    ['bid_option_other2_avg_price', 'bids_option_other2_bid_price_currency_sum', 'bids_option_other2_count'],
+    ['bid_option_other3_avg_price', 'bids_option_other3_bid_price_currency_sum', 'bids_option_other3_count'],
+    
+    
+    
     ### calcprice --> ...
     ["cp2bid", "start_price_bid_orders_count", "calcprices_count"],
     ["cp2start_price_bid", "start_price_bid_orders_count", "calcprices_count"],
     ["cp2accept", "accepted_orders_count", "calcprices_count"],
     ["cp2done", "rides_count", "calcprices_count"],
     # prices
+    ['bid_price_currency', 'bids_bid_price_currency_sum', 'bids_count'],
     ["minprice_usd", "minprice_usd_sum", "calcprices_count"],
     ["price_base_usd", "price_base_usd_sum", "calcprices_count"],
     ["recprice_usd", "recprice_usd_sum", "calcprices_count"],
@@ -338,9 +396,264 @@ def metric_surge_le_1_rides_count(df, group_cols):
             .reset_index())
 
 
-def calculate_absolute_metrics(df_recprice, df_order_with_recprice, group_cols):
+# from df_bids
+def metric_drivers_count(df, group_cols):
+    return (df
+            .groupby(group_cols)
+            .agg(drivers_count=('driver_uuid', 'nunique'))
+            .reset_index())
+
+def metric_bids_count(df, group_cols):
+    return (df
+            .groupby(group_cols)
+            .agg(bids_count=('bid_uuid', 'nunique'))
+            .reset_index())
+
+def metric_bids_bid_price_currency_sum(df, group_cols):
+    return (df
+            .groupby(group_cols)
+            .agg(bids_bid_price_currency_sum=('bid_price_currency', 'sum'))
+            .reset_index())
+
+def metric_accepted_bids_count(df, group_cols):
+    return (df
+            .groupby(group_cols)
+            .agg(accepted_bids_count=('is_bid_accepted', 'sum'))
+            .reset_index())
+
+def metric_accepted_bids_bid_price_currency_sum(df, group_cols):
+    return (df[df.is_bid_accepted]
+            .groupby(group_cols)
+            .agg(accepted_bids_bid_price_currency_sum=('bid_price_currency', 'sum'))
+            .reset_index())
+
+def metric_rides_by_bid_option_startprice_count(df, group_cols):
+    return (df[(df.option_number == 'startprice') & (df.is_order_done)]
+            .groupby(group_cols)
+            .agg(rides_by_bid_option_startprice_count=('order_uuid', 'nunique'))
+            .reset_index())
+
+def TEST_rides_count_by_bids(df, group_cols):
+    return (df[df.is_order_done]
+            .groupby(group_cols)
+            .agg(TEST_rides_count_by_bids=('order_uuid', 'nunique'))
+            .reset_index())
+
+def metric_bids_option_startprice_count(df, group_cols):
+    return (df[df.option_number == 'startprice']
+            .groupby(group_cols)
+            .agg(bids_option_startprice_count=('bid_uuid', 'nunique'))
+            .reset_index())
+
+def metric_bids_option_startprice_bid_price_currency_sum(df, group_cols):
+    return (df[df.option_number == 'startprice']
+            .groupby(group_cols)
+            .agg(bids_option_startprice_bid_price_currency_sum=('bid_price_currency', 'sum'))
+            .reset_index())
+
+def metric_accepted_bids_option_startprice_count(df, group_cols):
+    return (df[(df.option_number == 'startprice') & (df.is_bid_accepted)]
+            .groupby(group_cols)
+            .agg(accepted_bids_option_startprice_count=('bid_uuid', 'nunique'))
+            .reset_index())
+
+def metric_bids_option_startprice_accepted_bid_price_currency_sum(df, group_cols):
+    return (df[(df.option_number == 'startprice') & (df.is_bid_accepted)]
+            .groupby(group_cols)
+            .agg(accepted_bids_option_startprice_bid_price_currency_sum=('bid_price_currency', 'sum'))
+            .reset_index())
+
+def metric_rides_by_bid_option_option1_count(df, group_cols):
+    return (df[(df.option_number == 'option 1') & (df.is_order_done)]
+            .groupby(group_cols)
+            .agg(rides_by_bid_option_option1_count=('order_uuid', 'nunique'))
+            .reset_index())
+
+def metric_bids_option_option1_count(df, group_cols):
+    return (df[df.option_number == 'option 1']
+            .groupby(group_cols)
+            .agg(bids_option_option1_count=('bid_uuid', 'nunique'))
+            .reset_index())
+
+def metric_bids_option_option1_bid_price_currency_sum(df, group_cols):
+    return (df[df.option_number == 'option 1']
+            .groupby(group_cols)
+            .agg(bids_option_option1_bid_price_currency_sum=('bid_price_currency', 'sum'))
+            .reset_index())
+
+def metric_accepted_bids_option_option1_count(df, group_cols):
+    return (df[(df.option_number == 'option 1') & (df.is_bid_accepted)]
+            .groupby(group_cols)
+            .agg(accepted_bids_option_option1_count=('bid_uuid', 'nunique'))
+            .reset_index())
+
+def metric_accepted_bids_option_option1_bid_price_currency_sum(df, group_cols):
+    return (df[(df.option_number == 'option 1') & (df.is_bid_accepted)]
+            .groupby(group_cols)
+            .agg(accepted_bids_option_option1_bid_price_currency_sum=('bid_price_currency', 'sum'))
+            .reset_index())
+
+def metric_rides_by_bid_option_option2_count(df, group_cols):
+    return (df[(df.option_number == 'option 2') & (df.is_order_done)]
+            .groupby(group_cols)
+            .agg(rides_by_bid_option_option2_count=('order_uuid', 'nunique'))
+            .reset_index())
+
+def metric_bids_option_option2_count(df, group_cols):
+    return (df[df.option_number == 'option 2']
+            .groupby(group_cols)
+            .agg(bids_option_option2_count=('bid_uuid', 'nunique'))
+            .reset_index())
+
+def metric_bids_option_option2_bid_price_currency_sum(df, group_cols):
+    return (df[df.option_number == 'option 2']
+            .groupby(group_cols)
+            .agg(bids_option_option2_bid_price_currency_sum=('bid_price_currency', 'sum'))
+            .reset_index())
+
+def metric_accepted_bids_option_option2_count(df, group_cols):
+    return (df[(df.option_number == 'option 2') & (df.is_bid_accepted)]
+            .groupby(group_cols)
+            .agg(accepted_bids_option_option2_count=('bid_uuid', 'nunique'))
+            .reset_index())
+
+def metric_accepted_bids_option_option2_bid_price_currency_sum(df, group_cols):
+    return (df[(df.option_number == 'option 2') & (df.is_bid_accepted)]
+            .groupby(group_cols)
+            .agg(accepted_bids_option_option2_bid_price_currency_sum=('bid_price_currency', 'sum'))
+            .reset_index())
+
+def metric_rides_by_bid_option_option3_count(df, group_cols):
+    return (df[(df.option_number == 'option 3') & (df.is_order_done)]
+            .groupby(group_cols)
+            .agg(rides_by_bid_option_option3_count=('order_uuid', 'nunique'))
+            .reset_index())
+
+def metric_bids_option_option3_count(df, group_cols):
+    return (df[df.option_number == 'option 3']
+            .groupby(group_cols)
+            .agg(bids_option_option3_count=('bid_uuid', 'nunique'))
+            .reset_index())
+
+def metric_bids_option_option3_bid_price_currency_sum(df, group_cols):
+    return (df[df.option_number == 'option 3']
+            .groupby(group_cols)
+            .agg(bids_option_option3_bid_price_currency_sum=('bid_price_currency', 'sum'))
+            .reset_index())
+
+def metric_accepted_bids_option_option3_count(df, group_cols):
+    return (df[(df.option_number == 'option 3') & (df.is_bid_accepted)]
+            .groupby(group_cols)
+            .agg(accepted_bids_option_option3_count=('bid_uuid', 'nunique'))
+            .reset_index())
+
+def metric_accepted_bids_option_option3_bid_price_currency_sum(df, group_cols):
+    return (df[(df.option_number == 'option 3') & (df.is_bid_accepted)]
+            .groupby(group_cols)
+            .agg(accepted_bids_option_option3_bid_price_currency_sum=('bid_price_currency', 'sum'))
+            .reset_index())
+
+def metric_rides_by_bid_option_other1_count(df, group_cols):
+    return (df[(df.option_number == 'option 1+') & (df.is_order_done)]
+            .groupby(group_cols)
+            .agg(rides_by_bid_option_other1_count=('order_uuid', 'nunique'))
+            .reset_index())
+
+def metric_bids_option_other1_count(df, group_cols):
+    return (df[df.option_number == 'option 1+']
+            .groupby(group_cols)
+            .agg(bids_option_other1_count=('bid_uuid', 'nunique'))
+            .reset_index())
+
+def metric_bids_option_other1_bid_price_currency_sum(df, group_cols):
+    return (df[df.option_number == 'option 1+']
+            .groupby(group_cols)
+            .agg(bids_option_other1_bid_price_currency_sum=('bid_price_currency', 'sum'))
+            .reset_index())
+
+def metric_accepted_bids_option_other1_count(df, group_cols):
+    return (df[(df.option_number == 'option 1+') & (df.is_bid_accepted)]
+            .groupby(group_cols)
+            .agg(accepted_bids_option_other1_count=('bid_uuid', 'nunique'))
+            .reset_index())
+
+def metric_accepted_bids_option_other1_bid_price_currency_sum(df, group_cols):
+    return (df[(df.option_number == 'option 1+') & (df.is_bid_accepted)]
+            .groupby(group_cols)
+            .agg(accepted_bids_option_other1_bid_price_currency_sum=('bid_price_currency', 'sum'))
+            .reset_index())
+
+def metric_rides_by_bid_option_other2_count(df, group_cols):
+    return (df[(df.option_number == 'option 2+') & (df.is_order_done)]
+            .groupby(group_cols)
+            .agg(rides_by_bid_option_other2_count=('order_uuid', 'nunique'))
+            .reset_index())
+
+def metric_bids_option_other2_count(df, group_cols):
+    return (df[df.option_number == 'option 2+']
+            .groupby(group_cols)
+            .agg(bids_option_other2_count=('bid_uuid', 'nunique'))
+            .reset_index())
+
+def metric_bids_option_other2_bid_price_currency_sum(df, group_cols):
+    return (df[df.option_number == 'option 2+']
+            .groupby(group_cols)
+            .agg(bids_option_other2_bid_price_currency_sum=('bid_price_currency', 'sum'))
+            .reset_index())
+
+def metric_accepted_bids_option_other2_count(df, group_cols):
+    return (df[(df.option_number == 'option 2+') & (df.is_bid_accepted)]
+            .groupby(group_cols)
+            .agg(accepted_bids_option_other2_count=('bid_uuid', 'nunique'))
+            .reset_index())
+
+def metric_accepted_bids_option_other2_bid_price_currency_sum(df, group_cols):
+    return (df[(df.option_number == 'option 2+') & (df.is_bid_accepted)]
+            .groupby(group_cols)
+            .agg(accepted_bids_option_other2_bid_price_currency_sum=('bid_price_currency', 'sum'))
+            .reset_index())
+
+def metric_rides_by_bid_option_other3_count(df, group_cols):
+    return (df[(df.option_number == 'option 3+') & (df.is_order_done)]
+            .groupby(group_cols)
+            .agg(rides_by_bid_option_other3_count=('order_uuid', 'nunique'))
+            .reset_index())
+
+def metric_bids_option_other3_count(df, group_cols):
+    return (df[df.option_number == 'option 3+']
+            .groupby(group_cols)
+            .agg(bids_option_other3_count=('bid_uuid', 'nunique'))
+            .reset_index())
+
+def metric_bids_option_other3_bid_price_currency_sum(df, group_cols):
+    return (df[df.option_number == 'option 3+']
+            .groupby(group_cols)
+            .agg(bids_option_other3_bid_price_currency_sum=('bid_price_currency', 'sum'))
+            .reset_index())
+
+def metric_accepted_bids_option_other3_count(df, group_cols):
+    return (df[(df.option_number == 'option 3+') & (df.is_bid_accepted)]
+            .groupby(group_cols)
+            .agg(accepted_bids_option_other3_count=('bid_uuid', 'nunique'))
+            .reset_index())
+
+def metric_accepted_bids_option_other3_bid_price_currency_sum(df, group_cols):
+    return (df[(df.option_number == 'option 3+') & (df.is_bid_accepted)]
+            .groupby(group_cols)
+            .agg(accepted_bids_option_other3_bid_price_currency_sum=('bid_price_currency', 'sum'))
+            .reset_index())
+
+
+
+
+def calculate_absolute_metrics(df_recprice, df_order_with_recprice, df_bids, df_order, group_cols):
     dfm = (metric_calcprices_count(df_recprice, group_cols)
            .merge(metric_orders_count(df_order_with_recprice, group_cols), on=group_cols, how='left')
+           .merge(metric_drivers_count(df_bids, group_cols), on=group_cols, how='left')
+           .merge(metric_bids_count(df_bids, group_cols), on=group_cols, how='left')
+           .merge(metric_bids_bid_price_currency_sum(df_bids, group_cols), on=group_cols, how='left')
+           .merge(metric_accepted_bids_count(df_bids, group_cols), on=group_cols, how='left')
+           .merge(metric_accepted_bids_bid_price_currency_sum(df_bids, group_cols), on=group_cols, how='left')
            .merge(metric_tenders_count(df_order_with_recprice, group_cols), on=group_cols, how='left')
            .merge(metric_orders_with_bids_count(df_order_with_recprice, group_cols), on=group_cols, how='left')
            .merge(metric_start_price_bid_orders_count(df_order_with_recprice, group_cols), on=group_cols, how='left')
@@ -348,6 +661,8 @@ def calculate_absolute_metrics(df_recprice, df_order_with_recprice, group_cols):
            .merge(metric_start_price_bid_rides_count(df_order_with_recprice, group_cols), on=group_cols, how='left')
            .merge(metric_accepted_orders_count(df_order_with_recprice, group_cols), on=group_cols, how='left')
            .merge(metric_rides_count(df_order_with_recprice, group_cols), on=group_cols, how='left')
+           .merge(metric_rides_count(df_order, group_cols), on=group_cols, how='left')
+           .merge(TEST_rides_count_by_bids(df_bids, group_cols), on=group_cols, how='left')
            .merge(metric_price_start_usd_sum(df_order_with_recprice, group_cols), on=group_cols, how='left')
            .merge(metric_rides_price_start_usd_sum(df_order_with_recprice, group_cols), on=group_cols, how='left')
            .merge(metric_price_highrate_usd_sum(df_order_with_recprice, group_cols), on=group_cols, how='left')
@@ -376,7 +691,43 @@ def calculate_absolute_metrics(df_recprice, df_order_with_recprice, group_cols):
            .merge(metric_surge_gr_1_accepted_orders_count(df_order_with_recprice, group_cols), on=group_cols, how='left')
            .merge(metric_surge_le_1_accepted_orders_count(df_order_with_recprice, group_cols), on=group_cols, how='left')
            .merge(metric_surge_gr_1_rides_count(df_order_with_recprice, group_cols), on=group_cols, how='left')
-           .merge(metric_surge_le_1_rides_count(df_order_with_recprice, group_cols), on=group_cols, how='left'))
+           .merge(metric_surge_le_1_rides_count(df_order_with_recprice, group_cols), on=group_cols, how='left')
+           .merge(metric_rides_by_bid_option_startprice_count(df_bids, group_cols), on=group_cols, how='left')
+           .merge(metric_bids_option_startprice_count(df_bids, group_cols), on=group_cols, how='left')
+           .merge(metric_bids_option_startprice_bid_price_currency_sum(df_bids, group_cols), on=group_cols, how='left')
+           .merge(metric_accepted_bids_option_startprice_count(df_bids, group_cols), on=group_cols, how='left')
+           .merge(metric_bids_option_startprice_accepted_bid_price_currency_sum(df_bids, group_cols), on=group_cols, how='left')
+           .merge(metric_rides_by_bid_option_option1_count(df_bids, group_cols), on=group_cols, how='left')
+           .merge(metric_bids_option_option1_count(df_bids, group_cols), on=group_cols, how='left')
+           .merge(metric_bids_option_option1_bid_price_currency_sum(df_bids, group_cols), on=group_cols, how='left')
+           .merge(metric_accepted_bids_option_option1_count(df_bids, group_cols), on=group_cols, how='left')
+           .merge(metric_accepted_bids_option_option1_bid_price_currency_sum(df_bids, group_cols), on=group_cols, how='left')
+           .merge(metric_rides_by_bid_option_option2_count(df_bids, group_cols), on=group_cols, how='left')
+           .merge(metric_bids_option_option2_count(df_bids, group_cols), on=group_cols, how='left')
+           .merge(metric_bids_option_option2_bid_price_currency_sum(df_bids, group_cols), on=group_cols, how='left')
+           .merge(metric_accepted_bids_option_option2_count(df_bids, group_cols), on=group_cols, how='left')
+           .merge(metric_accepted_bids_option_option2_bid_price_currency_sum(df_bids, group_cols), on=group_cols, how='left')
+           .merge(metric_rides_by_bid_option_option3_count(df_bids, group_cols), on=group_cols, how='left')
+           .merge(metric_bids_option_option3_count(df_bids, group_cols), on=group_cols, how='left')
+           .merge(metric_bids_option_option3_bid_price_currency_sum(df_bids, group_cols), on=group_cols, how='left')
+           .merge(metric_accepted_bids_option_option3_count(df_bids, group_cols), on=group_cols, how='left')
+           .merge(metric_accepted_bids_option_option3_bid_price_currency_sum(df_bids, group_cols), on=group_cols, how='left')
+           .merge(metric_rides_by_bid_option_other1_count(df_bids, group_cols), on=group_cols, how='left')
+           .merge(metric_bids_option_other1_count(df_bids, group_cols), on=group_cols, how='left')
+           .merge(metric_bids_option_other1_bid_price_currency_sum(df_bids, group_cols), on=group_cols, how='left')
+           .merge(metric_accepted_bids_option_other1_count(df_bids, group_cols), on=group_cols, how='left')
+           .merge(metric_accepted_bids_option_other1_bid_price_currency_sum(df_bids, group_cols), on=group_cols, how='left')
+           .merge(metric_rides_by_bid_option_other2_count(df_bids, group_cols), on=group_cols, how='left')
+           .merge(metric_bids_option_other2_count(df_bids, group_cols), on=group_cols, how='left')
+           .merge(metric_bids_option_other2_bid_price_currency_sum(df_bids, group_cols), on=group_cols, how='left')
+           .merge(metric_accepted_bids_option_other2_count(df_bids, group_cols), on=group_cols, how='left')
+           .merge(metric_accepted_bids_option_other2_bid_price_currency_sum(df_bids, group_cols), on=group_cols, how='left')
+           .merge(metric_rides_by_bid_option_other3_count(df_bids, group_cols), on=group_cols, how='left')
+           .merge(metric_bids_option_other3_count(df_bids, group_cols), on=group_cols, how='left')
+           .merge(metric_bids_option_other3_bid_price_currency_sum(df_bids, group_cols), on=group_cols, how='left')
+           .merge(metric_accepted_bids_option_other3_count(df_bids, group_cols), on=group_cols, how='left')
+           .merge(metric_accepted_bids_option_other3_bid_price_currency_sum(df_bids, group_cols), on=group_cols, how='left')
+           )
     return dfm
 
            
