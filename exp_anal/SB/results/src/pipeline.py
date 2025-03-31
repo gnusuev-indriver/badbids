@@ -121,3 +121,34 @@ class RatioMetricHypothesisTestingPipeline:
         self.result["obs_needed"] = 2 * power_analysis.solve_power(
             effect_size=self.result["effect_size"], power=0.8, alpha=0.05
         )
+
+    # def calc_power(self):
+    #     print(f"Calculating power for metric: {self.metric}")
+    #     print(f"Effect size: {self.result['effect_size']}")
+    #     print(f"nobs1: {self.result['n_obs_control']}")
+    #     print(f"ratio: {self.result['n_obs_experimental'] / self.result['n_obs_control']}")
+    #     power_analysis = TTestIndPower()
+    #     try:
+    #         self.result["power"] = power_analysis.solve_power(
+    #             effect_size=self.result["effect_size"],
+    #             nobs1=self.result["n_obs_control"],
+    #             alpha=0.05,
+    #             ratio=self.result["n_obs_experimental"] / self.result["n_obs_control"],
+    #         )
+    #         print(f"Power calculated: {self.result['power']}")
+    #     except Exception as e:
+    #         print(f"Error calculating power: {e}")
+    #         self.result["power"] = None
+
+    # def calc_obs_needed(self):
+    #     print(f"Calculating obs needed for metric: {self.metric}")
+    #     print(f"Effect size: {self.result['effect_size']}")
+    #     power_analysis = TTestIndPower()
+    #     try:
+    #         self.result["obs_needed"] = 2 * power_analysis.solve_power(
+    #             effect_size=self.result["effect_size"], power=0.8, alpha=0.05
+    #         )
+    #         print(f"Obs needed calculated: {self.result['obs_needed']}")
+    #     except Exception as e:
+    #         print(f"Error calculating obs needed: {e}")
+    #         self.result["obs_needed"] = None
